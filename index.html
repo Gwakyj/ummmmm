@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>음모론</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.css">
+	<script>		
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['1Page', '2Page', '3Page'],
+				menu: '#menu',
+				//equivalent to jQuery `easeOutBack` extracted from http://matthewlein.com/ceaser/
+				easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+			});
+			$("#menu>li").click(function(){
+				$(this).addClass("act").siblings().removeClass("act");
+			});
+		});	
+	</script>	
+
+
+
+</head>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900|Playfair+Display+SC:900i&subset=japanese');
+	@import url('https://fonts.googleapis.com/css?family=Song+Myung:200,300,400,500,600,700,900|Playfair+Display+SC:900i&subset');
+	body {position: relative; background-color:black; }
+	#section {width: 100vw; height: 100vh;}
+	#section1 {height: 100vh;}
+	/*#um{position: absolute; font-family: 'Noto Serif JP', sans-serif; font-weight:900; font-size:100pt; left: 10px; margin: 0;}*/
+
+	#gif{position: absolute; top: 200px; left: 160px; z-index: 0; opacity: 1;}
+	#gif1{position: absolute; top: 450px; left: 160px; z-index: 0; opacity: 1;}
+	#gif2{position: absolute; top: 480px; left: 560px; z-index: 0; opacity: 1;}
+	#gif3{position: absolute; top: 200px; left: 910px; z-index: 0; opacity: 1;}
+	#gif4{position: absolute; top: 200px; left: 1210px; z-index: 0; opacity: 1;}
+	#gif5{position: absolute; top: 200px; left: 560px; z-index: 0; opacity: 1;}
+	.start{width: 30px; height: 30px; border-radius: 10px; padding: 5px; background-color: red; font-family: 'Song Myung', serif;  font-size: 1.3em; font-weight: 500; color: white; width: 600px; top: 60px; left: 480px; text-align: center;}
+	.title{position: absolute; margin: 0; width: 300px; height: 100px; width: 300px; height: auto; top: 30px; left: 20px;}
+	.line{position: absolute; top: 40px; left: 25px; margin: 0;width: 300px; height: 100px; visibility: hidden; z-index: 9999;}
+	.line1{position: absolute; top: 140px; margin: 0;width: 300px; height: 100px; opacity: 0.7; display: none; /*animation: drop 1s infinite;*/}
+
+	.jesus {position: absolute; top: 10px; left: 0px; margin: 0; width: 400px; opacity: 0.5;}
+	.scrat {position: absolute; margin: 0;  width: 500px;}
+	.moon {position: absolute; top: 0px; left: 700px; margin: 0; width: 400px; opacity: 0.5;}
+	.imgbox img:last-child{display: none;}
+	.imgbox:hover img:last-child{display: inline-block;} 
+
+	.textbox {position: absolute; font-family: 'Song Myung', serif;  font-size: 1.3em; font-weight: 500; color: white; width: 600px; top: 60px; left: 480px; text-align: left; line-height: 30px;}
+
+/*다빈치코드*/
+	.explain {position: absolute; background-color: red; width: 250px; height: 100px; padding: 10px; top: 100px; left: 50px; border-radius: 5px; font-family: 'Song Myung', serif;  font-size: 1.1em; font-weight: 500; color: white;}
+	.explain1 {position: absolute; background-color: red; width: 250px; height: 200px; padding: 10px; top: 60px; left: 1250px; font-family: 'Song Myung', serif;  font-size: 1.1em; font-weight: 500; color: white; border-radius: 5px;}
+
+
+	/*다빈치*/
+	.minibox {position: absolute; background-color: red; width: 91px; height: 20px; left: 835px; top: 124px; visibility: visible;}
+	.img {position: absolute; width: 250px; top: 80px; left: 300px; visibility: hidden;}
+	.minibox:hover {visibility: hidden;}
+	.minibox:hover .img {visibility: visible;}
+
+	.minibox1 {position: absolute; background-color: red; width: 91px; height: 20px; left: 481px; top: 183px; visibility: visible;}
+	.img1 {position: absolute; width: 250px; height: 250px; top: 80px; left: -310px; visibility: hidden; font-family: 'Song Myung', serif;  font-size: 1em; font-weight: 500; color: black; background-color: white; padding: 10px;}
+	.minibox1:hover {visibility: hidden;}
+	.minibox1:hover .img1 {visibility: visible;}
+
+	.minibox2 {position: absolute; background-color: red; width: 95px; height: 20px; left: 723px; top: 213px; visibility: visible;}
+	.img2 {position: absolute; width: 300px; top: 80px; left: 400px; visibility: hidden;}
+	.minibox2:hover {visibility: hidden;}
+	.minibox2:hover .img2 {visibility: visible;}
+
+	.minibox3 {position: absolute; background-color: red; width: 196px; height: 20px; left: 760px; top: 272px; visibility: visible;}
+	.img3 {position: absolute; width: 400px; top: -30px; left: 350px; visibility: hidden;}
+	.minibox3:hover {visibility: hidden;}
+	.minibox3:hover .img3 {visibility: visible;}
+
+	.minibox4 {position: absolute; background-color: red; width: 92px; height: 20px; left: 860px; top: 360px; visibility: visible;}
+	.img4 {position: absolute; width: 250px; height: 250px; top: 80px; left: -700px; visibility: hidden; font-family: 'Song Myung', serif;  font-size: 1em; font-weight: 500; color: black; background-color: white; padding: 10px;}
+	.minibox4:hover {visibility: hidden;}
+	.minibox4:hover .img4 {visibility: visible;}
+
+	.minibox5 {position: absolute; background-color: red; width: 72px; height: 20px; left: 719px; top: 508px; visibility: visible;}
+	.img5 {position: absolute; width: 300px; top: -130px; left: 400px; visibility: hidden;}
+	.minibox5:hover {visibility: hidden;}
+	.minibox5:hover .img5 {visibility: visible;}
+
+	.minibox6 {position: absolute; background-color: red; width: 77px; height: 20px; left: 975px; top: 508px; visibility: visible;}
+	.img6 {position: absolute; width: 300px; top: -130px; left: 150px; visibility: hidden;}
+	.minibox6:hover {visibility: hidden;}
+	.minibox6:hover .img6 {visibility: visible;}
+
+	/*달착륙*/
+	.minibox7 {position: absolute; background-color: red; width: 250px; height: 20px; left: 588px; top: 64px; visibility: visible;}
+	.img7 {position: absolute; width: 300px; top: 0px; left: 550px; visibility: hidden;}
+	.minibox7:hover {visibility: hidden;}
+	.minibox7:hover .img7 {visibility: visible;} /*1*/
+
+	.minibox8 {position: absolute; background-color: red; width: 160px; height: 20px; left: 900px; top: 64px; visibility: visible;}
+	.img8 {position: absolute; width: 300px; top: 0px; left: 250px; visibility: hidden;}
+	.minibox8:hover {visibility: hidden;}
+	.minibox8:hover .img8 {visibility: visible;} /*2*/
+
+	.minibox9 {position: absolute; background-color: red; width: 140px; height: 20px; left: 860px; top: 182px; visibility: visible;}
+	.img9 {position: absolute; width: 300px; top: -130px; left: 280px; visibility: hidden;}
+	.minibox9:hover {visibility: hidden;}
+	.minibox9:hover .img9 {visibility: visible;} /*3*/
+
+	.minibox10 {position: absolute; background-color: red; width: 75px; height: 20px; left: 668px; top: 300px; visibility: visible;}
+	.img10 {position: absolute; width: 300px; top: 0px; left: -550px; visibility: hidden;}
+	.minibox10:hover {visibility: hidden;}
+	.minibox10:hover .img10 {visibility: visible;} /*4*/
+
+	.minibox11 {position: absolute; background-color: red; width: 77px; height: 20px; left: 613px; top: 420px; visibility: visible;}
+	.img11 {position: absolute; width: 300px; top: -40px; left: -550px; visibility: hidden; font-family: 'Song Myung', serif;  font-size: 1em; font-weight: 500; color: black; background-color: white; padding: 10px;}
+	.minibox11:hover {visibility: hidden;}
+	.minibox11:hover .img11 {visibility: visible;} /*5*/
+
+	.minibox12 {position: absolute; background-color: red; width: 63px; height: 20px; left: 613px; top: 508px; visibility: visible;}
+	.img12 {position: absolute; width: 300px; top: -40px; left: -550px; visibility: hidden;}
+	.minibox12:hover {visibility: hidden;}
+	.minibox12:hover .img12 {visibility: visible;} /*6*/
+
+	.minibox13 {position: absolute; background-color: red; width: 73px; height: 20px; left: 954px; top: 568px; visibility: visible;}
+	.img13 {position: absolute; width: 300px; top: -180px; left: 180px; visibility: hidden;}
+	.minibox13:hover {visibility: hidden;}
+	.minibox13:hover .img13 {visibility: visible;} /*7*/
+
+	.minibox14 {position: absolute; background-color: red; width: 137px; height: 20px; left: 657px; top: 123px; visibility: visible;}
+	.img14 {position: absolute; width: 300px; top: 0px; left: 450px; visibility: hidden; font-family: 'Song Myung', serif;  font-size: 1em; font-weight: 500; color: black; background-color: white; padding: 10px;}
+	.minibox14:hover {visibility: hidden;}
+	.minibox14:hover .img14 {visibility: visible;} /*8*/
+
+	.minibox15 {position: absolute; background-color: red; width: 90px; height: 20px; left: 838px; top: 213px; visibility: visible;}
+	.img15 {position: absolute; width: 250px; top: -180px; left: 300px; visibility: hidden;}
+	.minibox15:hover {visibility: hidden;}
+	.minibox15:hover .img15 {visibility: visible;} /*9*/
+
+	.minibox16 {position: absolute; background-color: red; width: 112px; height: 20px; left: 918px; top: 273px; visibility: visible;}
+	.img16 {position: absolute; width: 300px; top: 0px; left: 200px; visibility: hidden;}
+	.minibox16:hover {visibility: hidden;}
+	.minibox16:hover .img16 {visibility: visible;} /*10*/
+
+	.minibox17 {position: absolute; background-color: red; width: 71px; height: 20px; left: 921px; top: 330px; visibility: visible;}
+	.img17 {position: absolute; width: 300px; top: 0px; left: -800px; visibility: hidden; font-family: 'Song Myung', serif;  font-size: 1em; font-weight: 500; color: black; background-color: white; padding: 10px;}
+	.minibox17:hover {visibility: hidden;}
+	.minibox17:hover .img17 {visibility: visible;} /*11*/
+
+	
+	#top1 {position: absolute; background-color: red; width: 100px; height: 100px; top: 650px; left: 1350px; border-radius: 50px;}
+
+
+	#box{position: absolute; /*background-color: red;*/ width: 300px; height: auto; top: 130px; left: 18px;}
+	#text{position: absolute; /*background-color: rgba(255,0,0,0.5)*/; width: 1100px; height: 600px; top: 150px; left: 200px; font-family: 'Song Myung', serif;  font-size: 2.5em; font-weight: 900; color: red; /*overflow: scroll;*/ display: none;}
+	#input{ position: absolute; /*background-color: red;*/ width: 150px; height: 150px; float: left;}
+
+	.form { width: 200px; height: 150px;background-color: rgda(0,0,0,0); padding: 30px, 30px, 15px, 30px;  position: absolute; margin: 0;}
+	.form input[type=submit],
+	.form input[type=text],
+	.form label{color: #fff; width: 150px; height: 150px; margin: 0; text-align: center;}
+
+	.form input[type=text]
+	{
+		font-family: 'Song Myung', serif; 
+		background: transparent;
+		border: none;
+		border-bottom: 8px dashed #644498;
+		width: 150px;
+		outline: none;
+		padding: 0px 0px 0px 0px;
+		font-size: 10em;
+	}
+
+	.form input[type=text]:focus
+	{
+		border-bottom: 8px dashed #D9FFA9;
+	}
+
+	.form input[type=submit],
+	.form input[type=submit]:hover
+	
+</style>
+	
+<body>
+
+<div id="fullpage">
+<div class="section">
+
+	<div class="start" style="position: absolute; top: 80px; left: 340px; width: 180px;"> ☜ start? click this!</div>
+
+	<div id="gif">
+		<img src="moon.gif" style="width: 350px; height: auto;">
+	</div>
+	<div id="gif1">
+		<img src="hmm.gif" style="width: 300px; height: auto;">
+	</div>
+	<div id="gif2">
+		<img src="a.gif" style="width: 300px; height: auto;">
+	</div>
+	<div id="gif4">
+		<img src="giphy.gif" style="width: 225px; height: auto;">
+	</div>
+	<div id="gif3">
+		<img src="ufo.gif" style="width: 300px; height: auto;">
+	</div>
+	<div id="gif5">
+		<img src="ww.gif" style="width: 300px; height: auto;">
+	</div>
+	
+	<div id="dd" style="z-index: 0;">	
+		<img src="dd.png" class="title"  style=" width: 300px; height: auto;">
+		<!-- <img src="d.png" class="line" style=" width: 300px; height: auto;"> -->
+	</div>
+	<div id="line1" class="line1" >
+		<img src="d.png" style="width: 300px; height: auto;">
+	</div>
+	
+	<div id="box"></div>
+	<div id="f"></div>
+	<div id="text"></div>
+
+	<script type="text/javascript">
+		var b = document.getElementById('dd');
+		var g = document.getElementById("line1");
+		var d = document.getElementById("text");
+
+
+			b.onclick = function() {
+					d.style.display = "block";
+					document.getElementById("gif").style.opacity = 0.5;
+					document.getElementById("gif1").style.opacity = 0.5;
+					document.getElementById("gif2").style.opacity = 0.5;
+					document.getElementById("gif3").style.opacity = 0.5;
+					document.getElementById("gif4").style.opacity = 0.5;
+					document.getElementById("gif5").style.opacity = 0.5;
+					
+					var total = 0;
+
+					for (var i = 0; i < 10; i++){
+						var newg = g.cloneNode(true);
+						newg.style.display = "block";
+						newg.style.top = 63 * i + "px";
+
+						box.appendChild(newg);
+
+					}
+				var o =0,text;
+				text = "사회에서 원인을 알 수 없는 사건이나 현상이 발생했을 때, 그 원인에 대해서 어떤 개인이나 집단이 의도적으로 확신을 가지고 펼치는 설명이다. 대개 그 발단이 되는 사건은 사회 전체에 강력한 파급력을 끼치며, 사람들에게 그 사회를 뒤흔드는 듯한 불안감을 주는 경우가 많다. 음모론적인 설명에는 핵심적으로 권력자, 지도자, 의사결정자들에 대한 불신이 포함되어 있다. 최신의 한 연구에 따르면, 음모론을 통하여 사람들이 자신들이 살아가는 사회체제와 구조에 만족하고 정당화하게 되는 것이 가능하다고 한다. 만악의 근원을 일부 악한 사람들의 문제로 몰아가면 어쨌건 그 사회 자체는 좋은 것이라고 느끼게 되기 때문이라고."
+				function typing() {
+					if(o<text.length){
+				d.innerHTML += text.charAt(o);
+				o++;
+				repeater = setTimeout(typing,50);
+					}
+				}
+				typing();
+
+				// document.body.style.height = 8000 + "px";
+
+			}
+	</script>
+</div>
+
+<div class="section">	
+	
+	<div id="move" style="position: absolute; /*background-color: red;*/ width: 80px; height: 70px;  top: 400px; left: 1400px;">
+		<img src="move1.png" style="height: 70px;">
+	</div>
+
+	<div class="explain1">
+		<span>*그림에 커서를 올려보세요<br>
+				*대문자의 조합<br><br>
+				앞글자에 주목하라<br><br>
+				선동:<br>
+				문서나 언동으로 대중의 감정을 부채질하여 일정한 행동대열에 참여하도록 고무·격려하는 행위.</span>
+	</div>
+
+	<div class="totalimg" style="display: block;">	<!-- 이미지박스1 -->
+		<div class="imgbox">
+			<img class="jesus" src="jesus.png" style="width: 450px; height: 800px;">
+			<img class="scrat" src="scratch1.png" style="width: 600px; height: auto; top: 30px; left: -100px; ">
+		</div>
+
+		<div class="imgbox">
+			<img class="moon" src="moon2.png" style="width:430px; height: auto;">
+			<img class="scrat" src="scratch2.png" style="width: 600px; height: auto; top: 30px; left: 610px; ">
+		</div>
+	</div>
+
+		<script type="text/javascript">
+			var next = document.getElementById('move')
+
+			next.onclick = function () {
+				totalimg.style.display = "none;"
+			}
+		</script>
+
+		<script type="text/javascript">
+			function a(gb){
+				var data = document.getElementById('g01').value;
+
+					if (data.length == '1'){
+						document.getElementById('g02').focus();
+					}
+			}
+			function b(gb){
+				var data = document.getElementById('g02').value
+
+					if (data.length == '1'){
+						document.getElementById('g03').focus();
+					}
+			}
+			function c(gb){
+				var data = document.getElementById('g03').value
+
+					if (data.length == '1'){
+						document.getElementById('g01').focus();
+					}
+			}
+
+		</script>
+
+		<form class="form" action="" method="post">
+		<label>
+		
+			<div id="input" style="top: -70px; left: 400px;"><input type="text" name="field1" required="true"  id="g01" value="" onkeyup="a(1);" style="text-transform: uppercase;" /></div>
+			<div id="input" style="top: -70px; left: 640px;"><input type="text" name="field1" required="true"  id="g02" value=""  onkeyup="b(1);" style="text-transform: uppercase; float: left;" /></div>
+			<div id="input" style="top: -70px; left: 880px;"><input type="text" name="field1" required="true"  id="g03" value="" onkeyup="c(1);" style="text-transform: uppercase; float: left;" /></div>
+		</label>
+		</form>
+
+	
+
+</div>
+
+<div class="section">
+	<div id="mention" style="display: block;">
+		<div style="width: 500px; font-family: 'Song Myung', serif;  font-size: 2.5em; font-weight: 500; color: white; position: absolute; left: 250px; top: 300px;">
+			선동: [ agitation, 煽動 ];
+		</div>
+		<div style="font-family: 'Song Myung', serif;  font-size: 1.8em; font-weight: 500; color: white; left: 300px; top: 420px; position: absolute;">
+			문서나 언동으로 대중의 감정을 부채질하여 일정한 행동대열에 참여하도록 고무·격려하는 행위.<br>
+			앞사람을 주목하여라
+		</div>
+	</div>
+
+		<div class="explain">
+			<span id="cur" style="visibility: hidden; ">*빨간 박스 정중앙에 커서를 올려보세요<span> <br>
+			<span style="visibility: visible;">*전 페이지로 돌아가고 싶다면 동그라미를 눌러주세요<span>
+		</div>
+		
+	<div id="davinci" style="display: none;"> <!-- 다빈치 코드 -->
+		<span class="textbox">
+			다빈치 코드(The Davinci code)<br><br>전 세계를 예수 신성 논란으로 몰아넣은 책, '다빈치코드'는 예수 음모론중 가장 유명한 버전이며, 보는 이로 하여금 마치 1700여년전 사라진 <br>아리우스파의 후예들이 아직도 건재한 듯한 착각을 불러 일으킨다. <br>이 책은 레오나르도 다빈치의 '최후의 만찬' 그림속에 아주 중요한 비밀코드가 숨어있다고 주장한다.<br>
+			댄 브라운은 그림속 예수 그리스도 오른편에 앉아 있는 사람이 바로 <br>그 비밀코드라고 말한다. 여성스럽게 그려진 그림속 주인공은 성격속 제자 요한이 아닌 예수의 여인 '막달란 마리아'를 그린 것이라는 주장이다. <br>이 그림을 그린 레오나르도 다빈치는 비밀조직 '시온수도회'의 수장이며 <br>그 조직이 전력을 다해 지켜온 것은 예수와 막달란 마리아사이의 후손, <br>즉 예수의 핏줄이라는 그의 주장도 이 책의 줄거리중 하나다. 레오나르도 다빈치가 밀라노의 산타 마리아 텔레 그라치에 교회에 벽화를 의뢰 받았을 때, 그 상징을 그림속에 포함시켰다고 한다.<br>
+			예수와 막달란 마리아 사이의 V자 구조나 두 사람의 전체적인 구도 M자등은 그 두사람의 관계를 암시하고 있고, 결국 성배를 뜻하는 말 Holy Grail (San Greal)은 Holy Blood (Sang Real) 즉 신성한 핏줄 - 예수의 후손을 의미한다고 이 책은 결말짓고 있다.<br>
+			다분히 니케아 공의회 당시 이단으로 쫒겨난 아리우스파의 교리를 염두에 두고 집필한 듯한 이 책은 충격적인 내용임에도 많은 증거 자료와 논리적인 개연성을 토대로 단순한 음모론으로 치부해버릴수 없을 만큼의 <br>진지한 토론들을 전 세계에 가져다 주었다. 로마 교황청이 이 책 내용에 <br>대해 공개적인 토론회를 진행한 일은 유명한 일화이다. 
+
+		</span>
+
+		<div class="minibox"> &ensp;1)
+			<img src="davinci.png" class="img">
+		</div>
+			
+		<div class="minibox1"> &ensp;2)
+			<span class="img1">아리우스파는 이집트 알렉산드리아 출신의 아리우스가 주장한 기독교 신학이다. 아리우스는 ‘성자’ 예수는 창조된 존재(피조물)이며, ‘성부’에게 종속적인 개념이라는 성격의 주장을 했는데, 삼위일체에 반대하는 그의 주장은 아리우스주의라는 신학적 흐름으로 발전하였다. 이에 대해 로마 가톨릭교회에서는 제1차 니케아 공의회(325년)에서 아리우스는 이단으로 배격되었으며, 아리우스 일파에 대한 공식적인 파문선언이 삽입된 니케아 신경을 채택하였다.
+			</span>
+		</div>
+		
+		<div class="minibox2"> 
+			&ensp;3)
+			<img src="final.png" class="img2">
+		</div>
+
+		<div class="minibox3">
+			&ensp;4)
+			<img src="you.png" class="img3">
+		</div>
+		<div class="minibox4"> 
+			&ensp;5)
+			<span class="img4">중세부터 현재까지 프랑스의 막후에서 정치를 휘두른 비밀조직. 몇 번이나 <br>왕위를 찬탈하려고 했었고, 프랑스 정부를 위기로 몰았던 비밀조직 '성체회'는 <br>조직체계가 '시온수도회'와 일치했는데, '시온수도회'의 분체이거나, 지도부는 <br>시온수도회일 것이 분명하다. <br>장미십자단 등으로 이름을 바꾸면서 실체가 알려지지 않는 막후의 비밀세력이다. 또한 프리메이슨단 역시 시온교단과 관련이 있다. 	
+			</span>
+		</div>
+		<div class="minibox5"> 
+			&ensp;6)
+			<img src="v.png" class="img5">
+		</div>
+		<div class="minibox6"> 
+			&ensp;7)
+			<img src="m.png" class="img6">
+		</div>
+	</div> <!-- 다빈치코드 끝 -->
+
+	<div id="apolo" style="display: none;"> <!-- 달착륙 음모론 -->
+		<div id="pagemove" style="position: absolute; height: 70px;  top: 400px; left: 1150px; display: block; cursor: pointer;"> <!-- 화살 -->
+			<img src="move1.png" style="height: 70px;">
+		</div><!-- 화살띁 -->
+		<div id="pagemove1" style="position: absolute; height: 70px;  top: 400px; left: 350px; display: none; cursor: pointer;"> <!-- 화살 -->
+			<img src="move2.png" style="height: 70px;">
+		</div><!-- 화살띁 -->
+
+		<div id="first" style="display: block;">
+		<span class="textbox">
+			1969년 10월 닐 암스트롱 등 우주조종사 3명을 태운 아폴로 우주선 11호가 성공적으로 달에 착륙하였다는 아폴로 달착륙 사실이 사실이 아닌 거짓이었다는 주장이 제기되고 있다. 달착륙 음모론의 근거들을 살펴보자<br>
+			*첫째 달은 진공상태이다. 즉 달에는 공기가 없어 바람이 불지 않는다는 뜻이다. 하지만 달착륙 당시 공개된 영상화면에는 달에 꽂은 성조기가 좌우로 흔들리는 것을 볼 수가 있다. 이는 대기(공기)가 있다는 것을 의미하며 영상이 달에서 찍은것이아닌 대기가 있는 지구에서 촬영한 것이라는 증거가 된다.<br>
+			*둘때 영상화면에 찍힌 달 하늘에 별이 하나도 보이지 않는다. 앞서 말했듯 달에는 대기가 없기때문에 별이 보여야 한다.<br>
+			*셋째 당시 낙후된 미국의 우주항공 기술로는 달에 갔다가 돌아올수 있는 확륙이 0.0017%밖에 되지 않았다.<br>
+			*넷째 중력문제. 달의 중력은 지구의 중력의 1/6 수준에 지나지 않는 아주 미미한 수준이다. 하지만 달에서 우주조종사들의 걸음걸이는 지구에서의 걸음걸이와 별 차이가 없다는 점이다. <br>
+			*다섯째 그림자. 이 사진을 보면 달 착륙선의 그림자 방향과 하단의 돌들의 그림자방향이 서로 다르다는 것을 알 수 있다. 달에는 오직 태양의 빛만이 존재하므로 그림자방향이 같아야하는 것은 상식이다. 또한 영상화면에 찍힌 달착륙선 뒤에 태양이 보이는데 태양이 비추지 않는 음지의 부분인 달착륙선 앞부분의 모습이 너무나도 밝고 선명하게 보인다는 것이다. 이는 지구의 실내스튜디오에서 여러대의 조명을 설치해놓고 촬영했다는 근거가 되고있다.<br>
+		</span>
+
+		<div class="minibox7">
+			&ensp;1)
+			<img class="img7" src="people.png">
+		</div>
+
+		<div class="minibox8">
+			&ensp;2)
+			<img class="img8" src="apolo.png">
+		</div>
+
+		<div class="minibox9">
+			&ensp;3)
+			<img class="img9" src="flag.png">
+		</div>
+
+		<div class="minibox10">
+			&ensp;4)
+			<img class="img10" src="sky.png">
+		</div>
+
+		<div class="minibox11">
+			&ensp;5)
+			<div class="img11">
+				달의 중력장은 달 궤도의 우주선에서 발신한 <br>전파를 추적하는 과정에서 규명됐다. <br>달 표면에서의 중력 가속도는 1.63 m/s2[1]으로 지구 표면 중력가속도의 16.7%이다. 따라서 <br>달에서 어떤 물체의 무게를 잰다면 지구의 16.7%만 나간다.
+			</div>
+		</div>
+
+		<div class="minibox12">
+			&ensp;6)
+			<img class="img12" src="stone.png">
+		</div>
+
+		<div class="minibox13">
+			&ensp;7)
+			<img class="img13" src="back.png">
+		</div>
+
+		</div> <!-- first 끝 -->
+
+		<div id="second" style="display: none;">
+		<span class="textbox">
+			*여섯째 Tv로 방영되었던 아폴로 11호 달착륙 영상은 모두 사전 각본에 따라 만들어졌던 영상을 이륙시점에 맞춰 보여주었던 영상이라는 얘기이며 아폴로 달락륙 영상은 에어리어 51구역에서 사전에 극비리에 촬영된 것이라고 한다. 실제로 인공위성으로 촬영한 에어리어 51구역내의 사진을 보면 에어리어 51구역의 어떤 지점은 마치 달 표면을 연상케하는 풀이 없는 암석만으로 이뤄진 구역이 있으며 그곳에는 마치 달표면처럼 구멍이 뚫린 여러개의 분화구의 모습을 사진에서 확인할 수 있다.<br>
+			1960년대에 소련이 미국보다 먼저 세계 최초의 위성인 스푸트니크호를 우주에 쏘아올림으로서 미국인들을 경악시켰고 미국은 우주개발 경쟁에서 소련에게 한발 뒤처지게 되는 상황이었다.
+			1960년대의 냉전시대에 미국과 소련 등 강대국들에 있어서 우주개발 경쟁에서 이긴 승자가 냉전시대의 승자가 되기 때문에 당시 소련에 비해 우주개발 기술이 뒤쳐져 있었던 미국이 소련을 추월하기 위해서는 소련보다 먼저 달착륙을 성공해야 하는 절박한 상태였다. 이러한 시대적 상황이 음모론을 만들어 내지 않았을까 생각이 든다.
+		</span>
+
+		<div class="minibox14">
+			&ensp;8)
+			<div class="img14">
+				제51구역(Area51)은 미국 네바다주에 위치한 군사 작전 지역으로, 일반인의 출입이 통제되어 있다. <br>정식명칭은 Homey Airport(ICAO: KXTA), <br>그룸 레이크(Groom Lake) 공군기지이다. <br>51구역은 그동안 미국 정부의 공식적인 인정이 전혀 없었으나, 2013년 CIA 비밀 문서가 <br>해제되면서 정식적인 기능이 드러났다. CIA <br>보고서에 따르면, 51구역은 과거 냉전 시기에 <br>사용했던 U-2기, SR-71 정찰기, 스텔스 폭격기 등의 최신 비행기 및 최신 무기들의 비밀 시험장이라고 한다. 1955년 무렵 설립된 철저한 비밀 기지로, 실체가 공개된 지금도 여전히 일반인 <br>접근은 금지되어 있다.
+			</div>
+		</div>
+
+		<div class="minibox15">
+			&ensp;9)
+			<img class="img15" src="moonss.png">
+		</div>
+
+		<div class="minibox16">
+			&ensp;10)
+			<img class="img16" src="hoho.png">
+		</div>
+
+		<div class="minibox17">
+			&ensp;11)
+			<div class="img17">
+				냉전(冷戰, 문화어: 랭전, 영어: Cold War, 러시아어: Холо́дная война)은 제2차 세계 대전 이후부터 1991년까지 미국과 소비에트 연방을 비롯한 양측 동맹국 사이에서 갈등, 긴장, 경쟁 상태가 이어진 대립 시기를 말한다. '냉전'이라는 표현은 버나드 바루크가 1947년에 <br>트루먼 독트린에 관한 논쟁 중 이 말을 써서 유명해졌는데, 이것은 무기를 들고 싸운다는 의미의 전쟁인 열전(熱戰, 영어: hot war)과 다르다. <br>당시에 냉전 주축 국가의 군대가 직접 서로 충돌한 적은 없었으나, 두 세력은 군사 동맹, 재래식 군대의 전략적 배치, 핵무기, 군비 경쟁, 첩보전, 대리전(proxy war), 선전, 그리고 우주 진출과 같은 기술 개발 경쟁의 양상을 보이며 서로 대립하였다.
+			</div>
+		</div>
+
+		<div class="minibox18">
+			&ensp;12)
+			<div class="img18">
+				
+			</div>
+		</div>
+
+		</div>
+
+		<script type="text/javascript">
+			
+			var p = document.getElementById("pagemove")
+			var q = document.getElementById("pagemove1")
+
+			p.onclick = function() {
+				q.style.display = "block";
+				p.style.display = "none";
+				second.style.display = "block";
+				first.style.display = "none";
+			}
+			q.onclick = function() {
+				q.style.display = "none";
+				p.style.display = "block";
+				first.style.display = "block";
+				second.style.display = "none";
+			}
+
+		</script>
+	</div> <!-- 달착륙끝 -->
+
+		<div id="top1"></div>
+
+</div> <!-- 섹션 끝 -->
+
+	
+	<script type="text/javascript">
+
+			window.onkeypress =  function(e){
+				console.log(e.keyCode);
+			}
+
+			var keys = {
+		      j: { code: 106, pressed: false, next: 'm' },
+		      m: { code: 109, pressed: false, next: 'd' },
+		      d: { code: 100, pressed: false, next: 'j' }
+		   },
+   		nextKey = 'j';
+
+			$(document).keypress(function(e) {
+    		 if (e.keyCode === keys[nextKey].code) {
+        		keys[nextKey].pressed = true;
+        		nextKey = keys[nextKey].next;
+    		}else {
+        		keys.j.pressed = false;
+        		keys.m.pressed = false;
+        		keys.d.pressed = false;
+        		nextKey = 'j';
+    		}
+
+    		 if (keys.j.pressed && keys.m.pressed && keys.d.pressed) {
+        				window.location.href='#3Page';
+        				davinci.style.display = "block";
+        				cur.style.visibility = "visible";
+        				mention.style.display = "none";
+
+
+    			}
+			})
+			var keyo = {
+		      a: { code: 97, pressed: false, next: 'b' },
+		      b: { code: 98, pressed: false, next: 'f' },
+		      f: { code: 102, pressed: false, next: 'a' }
+		   },
+   		nextKeyo = 'a';
+
+			$(document).keypress(function(c) {
+    		 if (c.keyCode === keyo[nextKeyo].code) {
+        		keyo[nextKeyo].pressed = true;
+        		nextKeyo = keyo[nextKeyo].next;
+    		}else {
+        		keyo.a.pressed = false;
+        		keyo.b.pressed = false;
+        		keyo.f.pressed = false;
+        		nextKeyo = 'a';
+    		}
+
+    		 if (keyo.a.pressed && keyo.b.pressed && keyo.f.pressed) {
+        				window.location.href='#3Page';
+        				apolo.style.display = "block";
+        				davinci.style.display = "none";
+        				cur.style.visibility = "visible";
+        				mention.style.display = "none";
+
+
+    			}
+			})
+			
+		</script>
+
+
+		<script type="text/javascript">
+			var top11 = document.getElementById('top1')
+
+			top11.onclick = function () {
+				console.log("clicked!!");
+				window.location.href='#2Page';
+				davinci.style.display = "none";
+				apolo.style.display = "none";
+				cur.style.visibility = "hidden";
+				mention.style.display = "block";
+
+
+			}
+		</script>
+
+		
+
+		
+
+</body>
+</html>
